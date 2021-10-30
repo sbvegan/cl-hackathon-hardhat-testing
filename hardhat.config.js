@@ -6,7 +6,7 @@ const KOVAN_RPC_URL = process.env.KOVAN_RPC_URL
 const PRIVATE_KEY = process.env.PRIVATE_KEY
 
 module.exports = {
-  defaultNetwork: "hardhat",
+  defaultNetwork: "kovan",
   networks: {
     hardhat: {
     },
@@ -16,7 +16,7 @@ module.exports = {
     }
   },
   solidity: {
-    version: "0.8.0",
+    compilers: [{version: "0.8.0"}, {version: "0.8.7"}],
     settings: {
       optimizer: {
         enabled: true,
@@ -31,6 +31,6 @@ module.exports = {
     artifacts: "./artifacts"
   },
   mocha: {
-    timeout: 20000
+    timeout: 3000000
   }
 }

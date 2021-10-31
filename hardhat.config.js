@@ -1,12 +1,13 @@
 require('dotenv').config()
 require("@nomiclabs/hardhat-ethers");
 require("./tasks/MyContractTasks.js");
+require("solidity-coverage")
 
 const KOVAN_RPC_URL = process.env.KOVAN_RPC_URL
 const PRIVATE_KEY = process.env.PRIVATE_KEY
 
 module.exports = {
-  defaultNetwork: "kovan",
+  defaultNetwork: "hardhat",
   networks: {
     hardhat: {
     },
